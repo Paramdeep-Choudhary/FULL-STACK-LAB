@@ -1,0 +1,582 @@
+/* ========================================
+   CSS VARIABLES
+======================================== */
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e293b;
+    --accent-color: #f59e0b;
+    --background-color: #f8fafc;
+    --white-color: #ffffff;
+    --text-color: #334155;
+}
+
+
+/* ========================================
+   GENERAL STYLING
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+
+    padding: 18px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+
+nav a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+    min-height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1e293b
+    );
+
+    color: white;
+}
+
+
+.hero-content {
+    max-width: 700px;
+    padding: 20px;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 50px auto;
+}
+
+
+.section-title {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 40px;
+
+    color: var(--secondary-color);
+}
+
+
+/* ========================================
+   PRODUCT GRID
+======================================== */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ========================================
+   PRODUCT CARD
+======================================== */
+
+.product-card {
+    background-color: var(--white-color);
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.product-image {
+    height: 160px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 80px;
+
+    background-color: #f1f5f9;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.product-card h3 {
+    margin-bottom: 10px;
+
+    color: var(--secondary-color);
+}
+
+
+.price {
+    color: var(--primary-color);
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.btn {
+    display: inline-block;
+
+    background-color: var(--primary-color);
+
+    color: var(--white-color);
+
+    text-decoration: none;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   PRODUCT DETAIL
+======================================== */
+
+.product-detail {
+    background-color: var(--white-color);
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.detail-image {
+    height: 400px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 180px;
+
+    background-color: #f1f5f9;
+
+    border-radius: 12px;
+}
+
+
+.detail-info h1 {
+    font-size: 36px;
+
+    margin-bottom: 15px;
+
+    color: var(--secondary-color);
+}
+
+
+.detail-price {
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: var(--primary-color);
+
+    margin-bottom: 20px;
+}
+
+
+.detail-info p {
+    margin-bottom: 15px;
+}
+
+
+#quantity {
+    padding: 10px;
+
+    margin-left: 10px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 5px;
+}
+
+
+/* ========================================
+   CART TABLE
+======================================== */
+
+.table-container {
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: var(--white-color);
+}
+
+
+th,
+td {
+    padding: 18px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+th {
+    background-color: var(--secondary-color);
+
+    color: var(--white-color);
+}
+
+
+.grand-total {
+    font-weight: bold;
+
+    font-size: 18px;
+
+    background-color: #f1f5f9;
+}
+
+
+.checkout-button {
+    text-align: right;
+
+    margin-top: 25px;
+}
+
+
+/* ========================================
+   CHECKOUT FORM
+======================================== */
+
+.checkout-form {
+    max-width: 700px;
+
+    margin: auto;
+
+    background-color: var(--white-color);
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.checkout-form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+
+.checkout-form input,
+.checkout-form textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+
+/* Focus State */
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+    outline: none;
+
+    border-color: var(--primary-color);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+
+/* Payment */
+
+fieldset {
+    border: 1px solid #cbd5e1;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    border-radius: 6px;
+}
+
+
+legend {
+    padding: 0 8px;
+
+    font-weight: bold;
+}
+
+
+.radio-label {
+    display: block !important;
+
+    font-weight: normal !important;
+
+    margin-bottom: 10px;
+}
+
+
+.radio-label input {
+    width: auto;
+
+    margin-right: 8px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: var(--secondary-color);
+
+    color: var(--white-color);
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 60px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .product-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .product-detail {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .container {
+        width: 94%;
+    }
+
+
+    .product-detail {
+        padding: 20px;
+    }
+
+
+    .detail-image {
+        height: 250px;
+
+        font-size: 120px;
+    }
+
+
+    .checkout-form {
+        padding: 20px;
+    }
+
+
+    th,
+    td {
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+}
